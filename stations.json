@@ -1,0 +1,83 @@
+[
+    {
+        "id" : "fm-hanako",
+        "name" : "FM HANAKO",
+        "url" : "https://musicbird-hls.leanstream.co/musicbird/JCB069.stream/playlist.m3u8",
+        "location" : "大阪府",
+        "frequency": "82.4MHz"
+    },
+
+    {
+        "id" : "kyoto-living-fm",
+        "name" : "京都リビングエフエム (Kyoto Living FM)",
+        "url" : "https://musicbird-hls.leanstream.co/musicbird/JCB104.stream/playlist.m3u8",
+        "location" : "大阪府",
+        "frequency": "84.5MHz"
+    },
+
+    {
+        "id" : "apple-wave",
+        "name" : "FMアップルウェーブ (FM Apple Wave)",
+        "url" : "https://musicbird-hls.leanstream.co/musicbird/JCB004.stream/playlist.m3u8",
+        "location" : "青森県",
+        "frequency" : "78.8MHz"
+    },
+
+    {
+        "id" : "fm-fujiyama",
+        "name" : "FMふじやま (FM Fujiyama)",
+        "url" : "https://musicbird-hls.leanstream.co/musicbird/JCB026.stream/playlist.m3u8",
+        "location" : "山梨県",
+        "frequency" : "77.6MHz"
+    },
+
+    {
+        "id" : "radio-narita",
+        "name" : "ラジオ成田 (Radio Narita)",
+        "url" : "https://musicbird-hls.leanstream.co/musicbird/JCB022.stream/playlist.m3u8",
+        "location" : "千葉県",
+        "frequency" : "83.7MHz"
+    },
+
+    {
+        "id" : "air-tesshi",
+        "name" : "Airてっし (Air Tesshi)",
+        "url" : "https://musicbird-hls.leanstream.co/musicbird/JCB003.stream/playlist.m3u8",
+        "location" : "北海道",
+        "frequency" : "78.8MHz"
+    },
+
+    {
+        "id" : "radio-shonan",
+        "name" : "レディオ湘南 (Radio Shonan)",
+        "url" : "https://musicbird-hls.leanstream.co/musicbird/JCB101.stream/playlist.m3u8",
+        "location" : "神奈川県",
+        "frequency" : "83.1MHz"
+    },
+
+    {
+        "id" : "musashino-fm",
+        "name" : "むさしのFM (Musashino FM)",
+        "url" : "https://musicbird-hls.leanstream.co/musicbird/JCB032.stream/playlist.m3u8",
+        "location" : "東京都",
+        "frequency" : "78.2MHz"
+    },
+
+    {
+        "id" : "radio-mix-kyoto",
+        "name" : "RADIO MIX KYOTO",
+        "url" : "mmsh://hdv5.nkansai.tv/radiomixkyoto",
+        "location" : "京都市北区",
+        "frequency" : "87.0MHz"
+    },
+
+    {
+        "id" : "bababouille",
+        "name" : "BABABOUILLE",
+        "url" : "./audio/bababouille.wav",
+        "location" : "フランス・パリ",
+        "frequency" : "420.69MHz"
+    }
+
+
+]
