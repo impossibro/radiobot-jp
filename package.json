@@ -4,7 +4,8 @@
   "description": "Listen to Japanese radio stations on Discord!",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "test": "nodemon index.js"
   },
   "keywords": [
     "japan",
@@ -18,5 +19,8 @@
     "@discordjs/opus": "^0.3.3",
     "discord.js": "^12.5.1",
     "discord.js-menu": "^2.2.2"
-  }
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  },
 }
