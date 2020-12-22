@@ -11,7 +11,7 @@ const client = new Discord.Client();
 client.login(Config.BOT_TOKEN);
 
 //bot command prefix
-const prefix = "++";
+const prefix = Config.BOT_PREFIX;
 
 const radioBot = {
     connection: null,
@@ -64,10 +64,6 @@ client.on("message", async function(msg) {
             stationList.start();
             break;
 
-        case "test":
-            console.log(radioBot.connection);
-            break;
-
         case "help":
             printHelpMenu(msg);
     }
@@ -93,12 +89,7 @@ client.on("voiceStateUpdate", async function(oldState, newState) {
     } else {
         radioBot.isAlone = true;
     }
-
-    //console.log("Bot is playing: " + radioBot.isPlaying);
-    //console.log("Bot VC Channel members: " + memberCount);
-    //console.log("Bot is alone: " + radioBot.isAlone);
-    disconnectWhenAlone()
-
+    disconnectWhenAlone();
 });
 
 
@@ -151,6 +142,7 @@ async function selectStation(message, station) {
             radioBot.dispatcher = radioBot.connection.play(stationURL);
             radioBot.isPlaying = true;
             message.channel.send("Now playing " + radioBot.stationName + "!");
+            client.user.setActivity(radioBot.stationName, { type: 'LISTENING'});
         } catch (err) {
             console.log(err);
             message.channel.send("An error occurred.")
@@ -240,7 +232,7 @@ function printHelpMenu(message) {
     const helpMenu = new Discord.MessageEmbed()
         .setColor("#faffff")
         .setTitle("Command List")
-        .setFooter("use the prefix ++ along with the commands below (e.g. '++stop')")
+        .setFooter("use the prefix " + Config.BOT_PREFIX + " along with the commands below (e.g. '" + Config.BOT_PREFIX + "stop')")
         .addFields([
             {name: "listen / play / p <station name>", value: "plays the selected station"},
             {name: "stop / s", value: "stops playing the curent radio"},
@@ -319,7 +311,7 @@ function disconnectRadio(message) {
 
 async function disconnectWhenAlone() {
     if(radioBot.isAlone) {
-        await sleep(10000);
+        await sleep(60000);
         if(radioBot.isAlone) {
             try {
                 radioBot.connection.disconnect();
